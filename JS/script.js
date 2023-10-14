@@ -17,6 +17,16 @@ let tokyoTime = moment().tz("Asia/Tokyo");
 
 tokyoDateElement.innerHTML = tokyoTime.format("MMMM Do YYYY");
 tokyoTimeElement.innerHTML = `${tokyoTime.format("h:mm:ss")} <small>${tokyoTime.format("A")}<small>`;
+
+
+// lisbon
+let lisbonElement = document.querySelector("#lisbon");
+let lisbonDateElement = lisbonElement.querySelector(".date");
+let lisbonTimeElement = lisbonElement.querySelector(".time");
+let lisbonTime = moment().tz("Europe/Lisbon");
+
+lisbonDateElement.innerHTML = lisbonTime.format("MMMM Do YYYY");
+lisbonTimeElement.innerHTML = `${lisbonTime.format("h:mm:ss")} <small>${lisbonTime.format("A")}<small>`;
 }
 
 function updateCity(event){
